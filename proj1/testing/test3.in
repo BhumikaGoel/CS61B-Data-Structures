@@ -1,0 +1,17 @@
+load dogs;
+/* What are the names all dogs whose breed
+     is 'Retriever'? */
+select Name from dogs
+     where Breed = 'Retriever';
+/* Whose age is >3, and what were their breeds? */
+select Breed
+         from dogs where Age > '3';
+/* Who has more than 60% floof and greater than age 4? */
+create table dogs2 as
+  select Name
+     from dogs
+     where Floof > '60' and Age > '4';
+/* Now print the names of the students in this list */
+select Name from dogs2;
+quit;
+

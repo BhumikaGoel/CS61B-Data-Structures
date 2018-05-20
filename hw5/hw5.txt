@@ -1,0 +1,47 @@
+
+HW #5.
+
+Question D.
+
+1. Ω(x^2) and O(x^2). Hence Θ(x^2).
+Because x^2 outweighs log x when x goes to infinity.
+
+2. Ω(log(x)) and O(log(x)). Hence Θ(log(x)). We only look at the function of 'x' here,
+which is log.
+
+3. Θ(x^3) because for the inner summation, we get Θ(x^2) but it will run outer summation number
+of times, which is another x. Hence we get x multiplied by x^2.
+
+4. Θ(M + N) because for the first iteration of outer loop, the inner loop runs M times and J reaches its limit.
+So even in next iteration of outer loop, j is already at its limit hence the inner loop
+does not run again. So the outer loop runs N times in total.
+
+
+5. Θ(n log n)
+
+
+6. Let there be an x' such that f(x) > 1 for all x > x', where
+   x is monotonic.
+   Now let M be first of the possible x s.t. f(x) < (f(x))^2.
+   Then M > x'.
+   For the given constant K, let K = 2ln(10)/ln(b). (such a choice since log to a base b is
+   equal to (log b) /(log 10)). Then whenever x > M and ln(f(x))/ln(b) < K ln(f(x))/ln(10),
+   we have ln(f(x)) < 2 ln(f(x))
+   Rewriting that, we get, log_b(f(x)) in log_10(f(x)).
+
+
+7. Similar to 2. The basic assumption to make in both questions is that
+   the polynomial is not infinite, with highest degree n. Let that term be ax^n,
+   where a is some nonzero constant.
+   Then for a constant b for a large x,
+   log(f(x)) <= log(b*ax^n)).
+   Then there exists a constant z for some x great enough
+    a*nlog(x) >= n*log(x) + log(ab) , where log(ab) will just be another constant.
+    We get log(f(x)) in O(log(x)).
+
+
+8. Given that f(n) is a positive, non-decreasing function,
+   round up of f(n) is also non-decreasing and also positive, due to inherited properties
+   of f(n). Then for any positive constant K, for all n, roundup of f(n) < K.f(n)
+   => roundup of f(n) is in O(f(n)). Basically, it rounds up resulting values in similar manner
+   as for f(n).
